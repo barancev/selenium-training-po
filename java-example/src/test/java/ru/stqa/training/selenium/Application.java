@@ -39,14 +39,8 @@ public class Application {
         registrationPage.address1Input().sendKeys(customer.getAddress());
         registrationPage.postcodeInput().sendKeys(customer.getPostcode());
         registrationPage.cityInput().sendKeys(customer.getCity());
-
-        driver.findElement(By.cssSelector("[id ^= select2-country_code]")).click();
-        driver.findElement(By.cssSelector(
-                String.format(".select2-results__option[id $= %s", customer.getCountry()))).click();
-        wait.until((WebDriver d) -> d.findElement(
-                By.cssSelector(String.format("select[name=zone_code] option[value=%s]", customer.getZone()))));
-        new Select(driver.findElement(By.name("zone_code"))).selectByValue(customer.getZone());
-
+        registrationPage.selectCountry(customer.getCountry());
+        registrationPage.selectZone(customer.getZone());
         registrationPage.emailInput().sendKeys(customer.getEmail());
         registrationPage.phoneInput().sendKeys(customer.getPhone());
         registrationPage.passwordInput().sendKeys(customer.getPassword());

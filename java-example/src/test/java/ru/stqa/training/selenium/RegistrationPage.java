@@ -3,6 +3,7 @@ package ru.stqa.training.selenium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class RegistrationPage extends Page {
 
@@ -45,5 +46,17 @@ public class RegistrationPage extends Page {
 
     public WebElement createAccountButton() {
         return driver.findElement(By.name("create_account"));
+    }
+
+    public void selectCountry(String country) {
+        driver.findElement(By.cssSelector("[id ^= select2-country_code]")).click();
+        driver.findElement(By.cssSelector(
+                String.format(".select2-results__option[id $= %s", country))).click();
+    }
+
+    public void selectZone(String zone) {
+        wait.until((WebDriver d) -> d.findElement(
+                By.cssSelector(String.format("select[name=zone_code] option[value=%s]", zone))));
+        new Select(driver.findElement(By.name("zone_code"))).selectByValue(zone);
     }
 }
