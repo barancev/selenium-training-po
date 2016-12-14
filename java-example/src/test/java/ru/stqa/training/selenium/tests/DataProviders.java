@@ -1,6 +1,7 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.tests;
 
 import com.tngtech.java.junit.dataprovider.DataProvider;
+import ru.stqa.training.selenium.model.Customer;
 
 public class DataProviders {
 

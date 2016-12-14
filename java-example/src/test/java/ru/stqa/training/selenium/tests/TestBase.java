@@ -1,6 +1,7 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.tests;
 
 import org.junit.Before;
+import ru.stqa.training.selenium.app.Application;
 
 public class TestBase {
 

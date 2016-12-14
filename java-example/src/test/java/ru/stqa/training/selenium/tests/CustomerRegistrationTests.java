@@ -1,9 +1,10 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.tests;
 
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import ru.stqa.training.selenium.model.Customer;
 
 import java.util.Set;
 

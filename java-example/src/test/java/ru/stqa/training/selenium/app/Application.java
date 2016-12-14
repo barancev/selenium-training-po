@@ -1,7 +1,11 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.app;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import ru.stqa.training.selenium.model.Customer;
+import ru.stqa.training.selenium.pages.AdminPanelLoginPage;
+import ru.stqa.training.selenium.pages.CustomerListPage;
+import ru.stqa.training.selenium.pages.RegistrationPage;
 
 import java.util.Set;
 
