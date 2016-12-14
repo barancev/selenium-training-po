@@ -1,21 +1,20 @@
 package ru.stqa.training.selenium;
 
+import com.tngtech.java.junit.dataprovider.DataProvider;
+import com.tngtech.java.junit.dataprovider.DataProviderRunner;
+import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+@RunWith(DataProviderRunner.class)
 public class CustomerRegistrationTests extends TestBase {
 
     @Test
-    public void canRegisterCustomer() {
-        Customer customer = Customer.newEntity()
-                .withFirstname("Adam").withLastname("Smith").withPhone("+0123456789")
-                .withAddress("Hidden Place").withPostcode("12345").withCity("New City")
-                .withCountry("US").withZone("KS")
-                .withEmail("adam"+System.currentTimeMillis()+"@smith.me")
-                .withPassword("qwerty").build();
-
+    @UseDataProvider(value = "validCustomers", location = DataProviders.class)
+    public void canRegisterCustomer(Customer customer) {
         driver.get("http://localhost/litecart/en/create_account");
         driver.findElement(By.name("firstname")).sendKeys(customer.getFirstname());
         driver.findElement(By.name("lastname")).sendKeys(customer.getLastname());

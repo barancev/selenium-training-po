@@ -11,6 +11,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="java-example_main" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="Gradle: com.tngtech.java:junit-dataprovider:1.12.0" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-edge-driver:3.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-firefox-driver:3.0.1" level="project" />
@@ -33,7 +35,6 @@
     <orderEntry type="library" name="Gradle: net.sourceforge.cssparser:cssparser:0.9.20" level="project" />
     <orderEntry type="library" name="Gradle: commons-io:commons-io:2.5" level="project" />
     <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
-    <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-client:9.2.18.v20160721" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-util:9.2.18.v20160721" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-io:9.2.18.v20160721" level="project" />
