@@ -13,7 +13,6 @@ import static java.util.stream.Collectors.toSet;
 public class Application {
 
 
-    private WebDriverWait wait;
     private WebDriver driver;
 
     private RegistrationPage registrationPage;
@@ -22,7 +21,6 @@ public class Application {
 
     public Application() {
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
         registrationPage = new RegistrationPage(driver);
         adminPanelLoginPage = new AdminPanelLoginPage(driver);
         customerListPage = new CustomerListPage(driver);
@@ -49,18 +47,11 @@ public class Application {
     }
 
     public Set<String> getCustomerIds() {
-        driver.get("http://localhost/litecart/admin");
-        if (driver.findElements(By.id("box-login")).size() > 0) {
-            driver.findElement(By.name("username")).sendKeys("admin");
-            driver.findElement(By.name("password")).sendKeys("admin");
-            driver.findElement(By.name("login")).click();
-            wait.until((WebDriver d) -> d.findElement(By.id("box-apps-menu")));
+        if (adminPanelLoginPage.open().isOnThisPage()) {
+            adminPanelLoginPage.enterUsername("admin").enterPassword("admin").submitLogin();
         }
 
-        driver.get("http://localhost/litecart/admin/?app=customers&doc=customers");
-        return driver.findElements(By.cssSelector("table.dataTable tr.row")).stream()
-                .map(e -> e.findElements(By.tagName("td")).get(2).getText())
-                .collect(toSet());
+        return customerListPage.open().getCustomerIds();
     }
 
 }
