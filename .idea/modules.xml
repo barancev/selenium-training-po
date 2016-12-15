@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-example_main.iml" filepath="$PROJECT_DIR$/.idea/modules/java-example_main.iml" group="java-example" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-example_test.iml" filepath="$PROJECT_DIR$/.idea/modules/java-example_test.iml" group="java-example" />
       <module fileurl="file://$PROJECT_DIR$/python-example/python-example.iml" filepath="$PROJECT_DIR$/python-example/python-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ruby-example/ruby-example.iml" filepath="$PROJECT_DIR$/ruby-example/ruby-example.iml" />
     </modules>
   </component>
 </project>
