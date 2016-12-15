@@ -23,8 +23,8 @@ public class AdminPanelLoginPage extends Page {
         return this;
     }
 
-    public AdminPanelLoginPage enterPassword(String username) {
-        driver.findElement(By.name("password")).sendKeys(username);
+    public AdminPanelLoginPage enterPassword(String password) {
+        driver.findElement(By.name("password")).sendKeys(password);
         return this;
     }
 

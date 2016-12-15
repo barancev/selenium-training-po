@@ -11,11 +11,10 @@ import java.util.Set;
 
 public class Application {
 
-
     private WebDriver driver;
 
     private RegistrationPage registrationPage;
-    private final AdminPanelLoginPage adminPanelLoginPage;
+    private AdminPanelLoginPage adminPanelLoginPage;
     private CustomerListPage customerListPage;
 
     public Application() {
