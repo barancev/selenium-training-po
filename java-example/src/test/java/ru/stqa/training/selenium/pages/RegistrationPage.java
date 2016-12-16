@@ -51,7 +51,7 @@ public class RegistrationPage extends Page {
     public void selectCountry(String country) {
         driver.findElement(By.cssSelector("[id ^= select2-country_code]")).click();
         driver.findElement(By.cssSelector(
-                String.format(".select2-results__option[id $= %s", country))).click();
+                String.format(".select2-results__option[id $= %s]", country))).click();
     }
 
     public void selectZone(String zone) {
