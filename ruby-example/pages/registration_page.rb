@@ -59,7 +59,7 @@ class RegistrationPage
 
   def select_zone(zone)
     @wait.until { @driver.find_element :css => "select[name=zone_code] option[value=#{zone}]" }
-    Selenium::WebDriver::Support::Select.new(@driver.find_element :name => 'zone_code').select_by :value, zone
+    Selenium::WebDriver::Support::Select.new(@driver.find_element :css => 'select[name=zone_code]').select_by :value, zone
   end
 
 end

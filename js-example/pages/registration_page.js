@@ -60,7 +60,7 @@ class RegistrationPage {
 
     selectZone(zone) {
         this.driver.wait(until.elementLocated(By.css("select[name=zone_code] option[value="+zone+"]")));
-        this.driver.findElement(By.name("zone_code")).click();
+        this.driver.findElement(By.css("select[name=zone_code]")).click();
         this.driver.findElement(By.css("select[name=zone_code] option[value="+zone+"]")).click();
     }
 }

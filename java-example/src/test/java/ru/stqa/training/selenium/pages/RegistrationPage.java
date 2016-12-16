@@ -57,6 +57,6 @@ public class RegistrationPage extends Page {
     public void selectZone(String zone) {
         wait.until((WebDriver d) -> d.findElement(
                 By.cssSelector(String.format("select[name=zone_code] option[value=%s]", zone))));
-        new Select(driver.findElement(By.name("zone_code"))).selectByValue(zone);
+        new Select(driver.cssSelector(By.name("select[name=zone_code]"))).selectByValue(zone);
     }
 }

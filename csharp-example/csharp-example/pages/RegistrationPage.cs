@@ -50,7 +50,7 @@ namespace csharp_example
         {
             wait.Until(d => d.FindElement(
                     By.CssSelector(String.Format("select[name=zone_code] option[value={0}]", zone))));
-            new SelectElement(driver.FindElement(By.Name("zone_code"))).SelectByValue(zone);
+            new SelectElement(driver.FindElement(By.CssSelector("select[name=zone_code]"))).SelectByValue(zone);
         }
 
     }
