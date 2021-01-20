@@ -4,7 +4,8 @@ GEM
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     diff-lcs (1.2.5)
-    ffi (1.9.14-x64-mingw32)
+    ffi (1.14.2)
+    ffi (1.14.2-x64-mingw32)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -26,6 +27,7 @@ GEM
     websocket (1.2.3)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
